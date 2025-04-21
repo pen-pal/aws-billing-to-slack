@@ -35,7 +35,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test Serverless packaging
         run: |
-          npm -g install serverless
+          npm -g install serverless@3
           serverless create --template-path . --path="/tmp/app-aws-cost" --name="app-aws-cost"
           cd /tmp/app-aws-cost
           serverless plugin install -n serverless-python-requirements
